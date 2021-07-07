@@ -28,3 +28,11 @@ Create a `.env` file inside `back-end`. To connect MongoDB database with the bac
 ATLAS_URI=<connection_string>
 ```
 In place of password, place the password of the database user.
+
+After adding the models and routes, if we send a POST request from `postman` with request body as a **json**-
+```json
+{
+    "userName": "Haz"
+}
+```
+The response should say `user added`.
