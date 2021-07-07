@@ -4,6 +4,9 @@ Start by creating a react app
 ```bash
 npx create-react-app mern-workout-tracker
 ```
+
+##Back End
+
 Inside the folder create another folder where back-end codes will reside.
 ```bash
 cd mern-workout-app
@@ -36,3 +39,15 @@ After adding the models and routes, if we send a POST request from `postman` wit
 }
 ```
 The response should say `User added!`.
+
+##Front End
+
+We won't require all the files of React app. So delete unnecessary files.
+Inside the project directorty, open a terminal and run-
+```bash
+npm install bootstrap
+```
+And then install `react-router-dom`. It makes the redirection of an url to a react component easier.
+```bash
+npm install react-router-dom
+```
