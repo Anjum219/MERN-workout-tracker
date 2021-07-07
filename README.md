@@ -35,4 +35,4 @@ After adding the models and routes, if we send a POST request from `postman` wit
     "userName": "Haz"
 }
 ```
-The response should say `user added`.
+The response should say `User added!`.
