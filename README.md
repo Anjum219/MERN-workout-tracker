@@ -51,3 +51,8 @@ And then install `react-router-dom`. It makes the redirection of an url to a rea
 ```bash
 npm install react-router-dom
 ```
+
+We need to install DatePicker for handling date inputs-
+```bash
+npm install react-datepicker
+```
