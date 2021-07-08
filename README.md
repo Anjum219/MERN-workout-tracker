@@ -35,7 +35,7 @@ In place of password, place the password of the database user.
 After adding the models and routes, if we send a POST request from `postman` with request body as a **json**-
 ```json
 {
-    "userName": "Haz"
+  "userName": "Haz"
 }
 ```
 The response should say `User added!`.
