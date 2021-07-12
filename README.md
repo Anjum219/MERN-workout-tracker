@@ -1,3 +1,5 @@
+### _To make your own exercise tracker app using MERN stack_
+
 Video Tutorial [link](https://youtu.be/7CqJlxBYj-M)
 
 Start by creating a react app
@@ -5,11 +7,11 @@ Start by creating a react app
 npx create-react-app mern-workout-tracker
 ```
 
-##Back End
+## Back End
 
-Inside the folder create another folder where back-end codes will reside.
+Inside the folder `mern-workout-tracker` create another folder where back-end codes will reside.
 ```bash
-cd mern-workout-app
+cd mern-workout-tracker
 npm init -y
 ```
 Install required dependencies with
@@ -26,7 +28,7 @@ To run the code from your terminal-
 nodemon server
 ```
 
-Create a `.env` file inside `back-end`. To connect MongoDB database with the back-end, log in to **MongoDB Atlas** and at a cluster click `connect`. Then click `connect your application`. Copy the connection string and paste it in back-end/.env file, put it as follows-
+Create a `.env` file inside `back-end`. To connect MongoDB database with the back-end, log in to **MongoDB Atlas** and at a cluster click `connect`. Google `What's my IP` and copy your IP address. At cluster->Security->Network Access, add your IP address as whitelisted. Then click `connect your application`. Copy the connection string and paste it in back-end/.env file, put it as follows-
 ```
 ATLAS_URI=<connection_string>
 ```
@@ -40,7 +42,7 @@ After adding the models and routes, if we send a POST request from `postman` wit
 ```
 The response should say `User added!`.
 
-##Front End
+## Front End
 
 We won't require all the files of React app. So delete unnecessary files.
 Inside the project directorty, open a terminal and run-
@@ -56,3 +58,11 @@ We need to install DatePicker for handling date inputs-
 ```bash
 npm install react-datepicker
 ```
+
+## Integrate Front-end with Back-end
+
+Install axios in the front-end directory-
+```bash
+npm install axios
+```
+Using `axios`, we can make http requests to our back-end from the front-end. At this stage, the full MERN stack should work finely!
