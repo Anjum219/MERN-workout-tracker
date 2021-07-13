@@ -34,7 +34,6 @@ function MaxDuration(exercises) {
 }
 
 function Achievement(props) {
-  console.log(props.exercises);
   const maxEx = MaxDuration(props.exercises);
   const maxDur = maxEx.duration;
   const maxDes = maxEx.description;
@@ -77,31 +76,18 @@ export default class ViewUser extends Component {
         this.setState({
           user: response.data
         });
-      })
-      .catch(error => {
-        console.log(error)
-      });
 
-      axios.get(`http://localhost:9009/exercises/`)
-      .then(response => {
-        console.log(response.data);
-        let ownExercise = [];
-
-        for( var i = 0; i < response.data.length; i++ ) {
-          if( response.data[i].userName === this.state.user.userName ) {
-            ownExercise.push(response.data[i]);
-          }
-        }
-
-        console.log(ownExercise);
-
-        this.setState({
-          exercises: ownExercise
-        });
-
-        console.log('here: ');
-        console.log(this.state.user.userName);
-        console.log(this.state.exercises);
+        axios.post('http://localhost:9009/exercises/findExerciseByUserName', {
+          userName: this.state.user.userName
+        })
+          .then(response => {
+            this.setState({
+              exercises: response.data
+            });
+          })
+          .catch(error => {
+            console.log(error);
+          });
       })
       .catch(error => {
         console.log(error)

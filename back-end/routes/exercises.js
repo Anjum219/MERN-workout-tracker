@@ -52,4 +52,10 @@ router.route('/update/:id').post((req, res) => {
     .catch(err => res.status(400).json(`Error: ${err}`));
 });
 
+router.route('/findExerciseByUserName').post((req, res) => {
+  Exercise.find({"userName": req.body.userName})
+    .then(exercises => res.json(exercises))
+    .catch(err => res.status(400).json(`Error: ${err}`));
+});
+
 module.exports = router;
